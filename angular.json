@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "astrogallery"
+    }
+  },
+  "defaultProject": "astrogallery",
+  "cli": {
+    "analytics": "060e155a-d36a-4c0f-a0c5-331f72da3d84"
+  }
 }

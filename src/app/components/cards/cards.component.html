@@ -1,0 +1,17 @@
+<div class="card-columns ">
+    <div *ngFor="let item of items" class="card animated fadeIn">
+        <img src="{{item.url}}" class="card-img-top" alt="...">
+        <div class="card-body text-justify">
+            <h5 class="card-title">{{item.title}}</h5>
+            <p class="card-text">
+
+                {{item.explanation}}
+
+            </p>
+            <div class="card-body text-justify">
+                <p class="card-link">{{item.copyright}}</p>
+                <p class="card-subtitle">{{item.date}}</p>
+            </div>
+        </div>
+    </div>
+</div>
