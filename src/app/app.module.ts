@@ -11,6 +11,8 @@ import { RouterModule} from '@angular/router';
 import { ROUTES } from './app.routes';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { CardsComponent } from './components/cards/cards.component';
+import { DateFinderComponent } from './components/date-finder/date-finder.component';
+import { FinderTwoDatesComponent } from './components/finder-two-dates/finder-two-dates.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { CardsComponent } from './components/cards/cards.component';
     HomeComponent,
     NavbarComponent,
     GalleryComponent,
-    CardsComponent
+    CardsComponent,
+    DateFinderComponent,
+    FinderTwoDatesComponent
   ],
   imports: [
     BrowserModule,
