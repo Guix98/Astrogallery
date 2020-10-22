@@ -11,7 +11,7 @@ export class GalleryComponent implements OnInit {
   loading: boolean;
   constructor(private apod: ApodService) {
     this.loading = true;
-    apod.getFromDate('2020-01-01').subscribe((data: any) => {
+    apod.getFromDate('2020-07-01').subscribe((data: any) => {
       this.gallery = data;
       this.loading = false;
     });

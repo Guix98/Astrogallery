@@ -13,6 +13,10 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { DateFinderComponent } from './components/date-finder/date-finder.component';
 import { FinderTwoDatesComponent } from './components/finder-two-dates/finder-two-dates.component';
+import { PublicationComponent } from './components/publication/publication.component';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
+import { BetweenDatesComponent } from './components/between-dates/between-dates.component';
+import { BetweenGalleryComponent } from './components/between-gallery/between-gallery.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { FinderTwoDatesComponent } from './components/finder-two-dates/finder-tw
     GalleryComponent,
     CardsComponent,
     DateFinderComponent,
-    FinderTwoDatesComponent
+    FinderTwoDatesComponent,
+    PublicationComponent,
+    DomseguroPipe,
+    BetweenDatesComponent,
+    BetweenGalleryComponent
   ],
   imports: [
     BrowserModule,

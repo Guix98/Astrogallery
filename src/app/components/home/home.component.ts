@@ -8,12 +8,20 @@ import { ApodService } from '../../services/apod.service';
 })
 export class HomeComponent implements OnInit {
 picture: any;
+today:string;
+yesterday:string ;
   constructor(apod: ApodService) {
-    apod.getByDate('2020-09-09')
+    var date = new Date();
+    this.today = date.getFullYear.toString()+"-"+date.getMonth.toString()+"-"+date.getDate.toString();
+    console.log(this.today);
+    
+    apod.getToday()
     .subscribe((data: any) => {
         console.log(data);
         this.picture = data;
         return data;
+    }, (error:any)=>{
+
     });
 
   }

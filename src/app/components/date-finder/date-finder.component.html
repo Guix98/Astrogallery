@@ -1,19 +1,16 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
 <form>
-  <div class="form-group">
-    <label for="text">Ingrese Fecha:</label> 
-    <div class="input-group">
-      <div class="input-group-prepend">
-        <div class="input-group-text">
-          <i class="fa fa-calendar"></i>
+    <div class="form-group">
+        <label for="text">Ingrese Fecha:</label>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <i class="fa fa-calendar"></i>
+                </div>
+            </div>
+            <input id="text" name="text" type="date" class="form-control" #fecha>
         </div>
-      </div> 
-      <input id="text" name="text" type="text" class="form-control">
     </div>
-  </div> 
-  <div class="form-group">
-    <button name="submit" type="submit" class="btn btn-primary">Aceptar</button>
-  </div>
+    <div class="form-group">
+        <button type="button" class="btn btn-primary" (click)="searchDate(fecha.value)">Aceptar</button>
+    </div>
 </form>
