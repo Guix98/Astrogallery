@@ -15,7 +15,7 @@ yesterday:string ;
     this.today = date.getFullYear.toString()+"-"+date.getMonth.toString()+"-"+date.getDate.toString();
     console.log(this.today);
     
-    apod.getToday()
+    apod.getByDate('2020-10-26')
     .subscribe((data: any) => {
         console.log(data);
         this.picture = data;
