@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { ApodService } from '../../services/apod.service';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-gallery',
@@ -8,13 +10,16 @@ import { ApodService } from '../../services/apod.service';
 })
 export class GalleryComponent implements OnInit {
   gallery: any[];
-  loading: boolean;
-  constructor(private apod: ApodService) {
-    this.loading = true;
-    apod.getFromDate('2020-07-01').subscribe((data: any) => {
-      this.gallery = data;
-      this.loading = false;
-    });
+
+  safeURL;
+  constructor(private apod: ApodService,
+    public data: DataService,
+    ) {
+
+   
+    this.gallery = this.data.gallery20;
+   
+    
   }
 
   ngOnInit(): void {

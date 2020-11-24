@@ -1,6 +1,7 @@
 <div class="card-columns ">
-    <div *ngFor="let item of items" class="card animated fadeIn">
-        <img src="{{item.url}}" class="card-img-top" alt="..." (click)="goToDate(item.date)">
+    <div *ngFor="let item of items" class="card animated fadeIn" (click)="goToDate(item.date)">
+        <iframe *ngIf="isVideo(item.media_type)" width="350" height="250" [src]='sanitize(item.url)' frameborder="0" allowfullscreen></iframe>
+        <img *ngIf="!isVideo(item.media_type)" src="{{item.url}}" class="card-img" alt="{{item.title}}">
         <div class="card-body text-justify">
             <h5 class="card-title">{{item.title}}</h5>
             <p class="card-text">
@@ -10,7 +11,7 @@
             </p>
             <div class="card-body text-justify">
                 <p class="card-link">{{item.copyright}}</p>
-                <p class="card-subtitle">{{item.date}}</p>
+                <p class="card-subtitle">{{item.date | date: 'fullDate'}}</p>
             </div>
         </div>
     </div>

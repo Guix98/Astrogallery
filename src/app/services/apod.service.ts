@@ -7,7 +7,6 @@ import { map  } from 'rxjs/operators';
 })
 export class ApodService {
     constructor(private http: HttpClient){
-        console.log('APOD Service Works!');
     }
     private key = '00FmdithvSghycve9AFB7xSgpm25kSZ1UAzJbu5Q';
     getQuery(headers: HttpHeaders){

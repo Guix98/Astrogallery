@@ -17,6 +17,7 @@ import { PublicationComponent } from './components/publication/publication.compo
 import { DomseguroPipe } from './pipes/domseguro.pipe';
 import { BetweenDatesComponent } from './components/between-dates/between-dates.component';
 import { BetweenGalleryComponent } from './components/between-gallery/between-gallery.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { BetweenGalleryComponent } from './components/between-gallery/between-ga
     PublicationComponent,
     DomseguroPipe,
     BetweenDatesComponent,
-    BetweenGalleryComponent
+    BetweenGalleryComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
