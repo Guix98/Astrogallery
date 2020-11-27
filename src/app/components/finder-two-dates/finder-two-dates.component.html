@@ -1,30 +1,21 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<body ng-app="exampleApp" ng-controller="ExampleCtrl as vm">
 
-<form>
-  <div class="form-group">
-    <label for="text">Ingrese Fecha :</label> 
-    <div class="input-group">
-      <div class="input-group-prepend">
-        <div class="input-group-text">
-          <i class="fa fa-calendar"></i>
-        </div>
-      </div> 
-      <input id="text" name="text" type="text" class="form-control">
-    </div>
+  <div class="form-group col-sm-4" >
+     <label for="birthdate" class="col-sm-4">Ingrese el rango de fechas</label>
+     <div class="col-sm-8">
+       <div class="input-group date" id="birthdate"  ng-model="vm.Birthdate" date-picker>
+         <input type="text" class="form-control netto-input"  ng-model="vm.Birthdate" date-picker-input>
+
+         <span class="input-group-addon">
+           <span class="glyphicon glyphicon-calendar"></span>
+         </span>
+       </div>
+     </div>
   </div>
-  <div class="form-group">
-    <label for="text1">Ingrese fecha final:</label> 
-    <div class="input-group">
-      <div class="input-group-prepend">
-        <div class="input-group-text">
-          <i class="fa fa-calendar"></i>
-        </div>
-      </div> 
-      <input id="text1" name="text1" type="text" class="form-control">
-    </div>
-  </div> 
-  <div class="form-group">
-    <button name="submit" type="submit" class="btn btn-primary">Aceptar</button>
+ <div class="form-group col-sm-4">
+     <label for="birthdateText" class="col-sm-4">Model:</label>
+     <div class="col-sm-8">
+         <input type="text" class="form-control netto-input"  ng-model="vm.Birthdate">
+     </div>
   </div>
-</form>
+</body>
